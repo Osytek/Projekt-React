@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Column.scss';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 class Column extends React.Component {
     render() {
@@ -15,7 +15,7 @@ class Column extends React.Component {
     }
 }
 Column.propTypes = {
-    columnTitle: PropTypes.node,
+    columnTitle: propTypes.node,
   };
 
 export default Column;
