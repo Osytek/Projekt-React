@@ -9,7 +9,7 @@ const Hero = (props) => (
     <img src={props.image} className={styles.image}></img>
   </header>
 );
-Hero.propTypes = {
+Hero.PropTypes = {
   titleText: PropTypes.node,
   image: PropTypes.string,
 };
