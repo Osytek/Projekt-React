@@ -10,11 +10,10 @@ import Icon from '../Column/Icon.js';
 class Column extends React.Component {
   static propTypes = {
     addCard: PropTypes.func,
+    cards: PropTypes.node,
   }
-
   static defaultProps = {
     icon: settings.defaultColumnIcon,
-    
   }
   render() {
     const {title, icon, cards, addCard} = this.props;
@@ -38,7 +37,6 @@ Column.propTypes = {
   icon: PropTypes.node,
   cards: PropTypes.node,
   title: PropTypes.node,
-  
 };
 
 
