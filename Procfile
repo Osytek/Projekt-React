@@ -1,1 +1,1 @@
-web: http-server dist
+bash: http-server dist
