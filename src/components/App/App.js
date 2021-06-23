@@ -2,13 +2,13 @@ import React from 'react';
 import Home from '../Home/HomeContainer';
 import Info from '../Info/Info';
 import FAQ from '../FAQ/FAQ';
-import SearchResults from '../SearchResults/SearchResults';
+import SearchResults from '../SearchResults/SearchResultsContainer';
 import {BrowserRouter, Route} from 'react-router-dom';
 import MainLayout from '../MainLayout/MainLayout.js';
 import {AnimatedSwitch} from 'react-router-transition';
 import styles from './App.scss';
 import List from '../List/ListContainer';
-
+ 
 const App = () => (
   <BrowserRouter>
     <MainLayout>
@@ -22,10 +22,11 @@ const App = () => (
         <Route exact path='/info' component={Info} />
         <Route exact path='/FAQ' component={FAQ} />
         <Route exact path="/list/:id" component={List} />
-        <Route exact path="/props/:id" component={SearchResults} />
+        <Route exact path="/search/:searchString" component={SearchResults} />
+        <Route exact path='*' component={404} />
       </AnimatedSwitch>
     </MainLayout>    
   </BrowserRouter>
 );
-
+ 
 export default App;
